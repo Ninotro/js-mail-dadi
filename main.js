@@ -5,17 +5,33 @@ const email = ["ninotroia96@gmail.com" , "simoneicardi80@yahoo.com" , "pincopall
 let emailUtente = prompt("Inserisci la tua Email")
 
 // definisco il messaggio
-let message = "Hai accesso al drive"
+let message 
+
+let entrance = 0
+
+
+
+for (i=0; i< email.length; i++ ) {
+
+
 
 // definisco la condizione per cui l'input inserito deve essere uguale ad almeno uno degli elementi
-if (emailUtente == email[0] || emailUtente == email[1] || emailUtente == email[2] || emailUtente == email[3]) {
+if (emailUtente === email[i]) {
+    entrance = 1
+  
+}
+
+
+
+
+}
+
+if (entrance != 1) {
+    message = "Tu non puoi accedere al drive"
     console.log(message);
 }
 
 else {
-    message = "Non hai accesso al drive"
+    message= " Tu puoi accedere al drive"
     console.log(message);
 }
-
-
-
