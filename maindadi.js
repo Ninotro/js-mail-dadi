@@ -1,9 +1,7 @@
-// chiedo di inserire un valore qualsiasi all'utente
-let numberUtente = prompt("Inserisci un numero da 1 a 6")
+// genero un numero casuale all'utente
+let numberUtente = Math.round(Math.random()*5)+1;
 
-// Definisco che sia un numero
-let numberUtenteComplete = parseInt(numberUtente)
-
+console.log("Il numero scelto per l'utente è:" + numberUtente);
 // Genero un numero casuale dal pc
 
 let numberPc =  Math.round(Math.random()*5)+1;
@@ -15,7 +13,7 @@ let message
 
 // definisco la condizione
 
-if (numberUtenteComplete > numberPc ) {
+if (numberUtente > numberPc ) {
 
     message = "Per questa volta hai vinto tu"
 
@@ -23,7 +21,7 @@ if (numberUtenteComplete > numberPc ) {
     
 }
 
-else if (numberUtenteComplete == numberPc) {
+else if (numberUtente == numberPc) {
     message = "C'eri quasi! Pareggio"
     console.log(message);
 
